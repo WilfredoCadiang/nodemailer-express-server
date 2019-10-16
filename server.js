@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   provider: 'gmail',
   port: (465),
-  secure: false,
+  secure: true,
   auth: {
     user: 'cadiangjhun@gmail.com', // Enter here email address from which you want to send emails
     pass: '09469259250' // Enter here password for email account from which you want to send emails
