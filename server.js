@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   port: (465),
   secure: true,
   auth: {
-    user: 'cadiangjhun@gmail.com', // Enter here email address from which you want to send emails
+    user: 'wilfredo@ptwsingapore.com', // Enter here email address from which you want to send emails
     pass: '09469259250' // Enter here password for email account from which you want to send emails
   },
   tls: {
