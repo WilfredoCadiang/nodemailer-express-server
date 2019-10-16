@@ -30,7 +30,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.post('/send', function (req, res) {
+app.post('/', function (req, res) {
 
   let senderName = req.body.contactFormName;
   let senderEmail = req.body.contactFormEmail;
