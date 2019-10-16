@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.get('/', (req, res)=> res.send("Hello My server is Running"));
+app.get('/', (req, res)=> res.send("This is a property of cadz"));
 
 app.use(bodyParser.json());
 
