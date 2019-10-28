@@ -11,8 +11,8 @@ const transporter = nodemailer.createTransport({
   port: (465),
   secure: true,
   auth: {
-    user: 'wilfredo@ptwsingapore.com', // Enter here email address from which you want to send emails
-    pass: '09469259250' // Enter here password for email account from which you want to send emails
+    user: 'hr@ptwsingapore.com', // Enter here email address from which you want to send emails
+    pass: 'Ptw12345678!' // Enter here password for email account from which you want to send emails
   },
   tls: {
     rejectUnauthorized: false
@@ -39,7 +39,7 @@ app.post('/', function (req, res) {
   let copyToSender = req.body.contactFormCopy;
 
   let mailOptions = {
-    to: ['wilfredo@ptwsingapore.com'], // Enter here the email address on which you want to send emails from your customers
+    to: ['ask@ptwsingapore.com'], // Enter here the email address on which you want to send emails from your customers
     from: senderName,
     subject: messageSubject,
     text: messageText,
