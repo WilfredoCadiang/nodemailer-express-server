@@ -34,6 +34,8 @@ app.post('/', function (req, res) {
 
   let senderName = req.body.contactFormName;
   let senderEmail = req.body.contactFormEmail;
+  let senderNumber = req.body.contactFormNumber;
+  let senderCompany = req.body.contactFormCompany;
   let messageSubject = req.body.contactFormSubjects;
   let messageText = req.body.contactFormMessage;
   let copyToSender = req.body.contactFormCopy;
@@ -42,7 +44,7 @@ app.post('/', function (req, res) {
     to: ['ask@ptwsingapore.com'], // Enter here the email address on which you want to send emails from your customers
     from: senderName,
     subject: messageSubject,
-    text: messageText,
+    text: messageText + "\n\n" + senderName +"\nCompany: " + senderCompany +"\nContact: "+senderNumber,
     replyTo: senderEmail
   };
 
@@ -55,6 +57,22 @@ app.post('/', function (req, res) {
   }
 
   if (senderEmail === '') {
+    res.status(400);
+    res.send({
+      message: 'Bad request'
+    });
+    return;
+  }
+  
+  if (senderNumber === '') {
+    res.status(400);
+    res.send({
+      message: 'Bad request'
+    });
+    return;
+  }
+
+  if (senderCompany === '') {
     res.status(400);
     res.send({
       message: 'Bad request'
