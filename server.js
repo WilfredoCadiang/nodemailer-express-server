@@ -41,7 +41,7 @@ app.post('/', function (req, res) {
   let copyToSender = req.body.contactFormCopy;
 
   let mailOptions = {
-    to: ['wilfredo@ptwsingapore.com'], // Enter here the email address on which you want to send emails from your customers
+    to: ['ask@ptwsingapore.com'], // Enter here the email address on which you want to send emails from your customers
     from: senderName,
     subject: messageSubject,
     text: messageText + "\n\n" + senderName +"\nCompany: " + senderCompany +"\nContact: "+senderNumber,
